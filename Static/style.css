@@ -1,0 +1,381 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 50px auto;
+    text-align: center;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.dashboard {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: white;
+    width: 180px;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+    font-size: 32px;
+    margin: 0;
+}
+
+.card p {
+    color: #555;
+}
+
+button {
+    margin-top: 40px;
+    padding: 12px 25px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+form {
+    max-width: 600px;
+    margin: 30px auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* Applications Table */
+
+.applications-section {
+    width: 90%;
+    margin: 50px auto;
+    text-align: left;
+}
+
+.applications-section h2 {
+    font-size: 28px;
+    margin-bottom: 25px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+th,
+td {
+    padding: 18px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+th {
+    background-color: #f8f9fa;
+    font-weight: bold;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+/* Delete form should NOT look like the Add Application form */
+
+.applications-section form {
+    margin: 0;
+    padding: 0;
+    background: none;
+    box-shadow: none;
+    max-width: none;
+    text-align: center;
+}
+
+/* Delete button */
+
+.applications-section button {
+    margin-top: 0;
+    padding: 10px 18px;
+    font-size: 14px;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    white-space: nowrap;
+}
+
+.actions form {
+    margin: 0;
+}
+
+.edit-btn,
+.delete-btn {
+    padding: 14px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #000;
+    background-color: #eee;
+}
+
+.edit-btn:hover,
+.delete-btn:hover {
+    background-color: #ddd;
+}
+
+.status {
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.status-applied {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.status-interview {
+    background-color: #cfe2ff;
+    color: #084298;
+}
+
+.status-offer {
+    background-color: #d1e7dd;
+    color: #0f5132;
+}
+
+.status-rejected {
+    background-color: #f8d7da;
+    color: #842029;
+}
+
+/* Search Bar */
+
+.search-form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.search-form input {
+    width: 350px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.search-form button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Applications Table */
+
+.applications-section {
+    width: 90%;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.applications-section h2 {
+    margin-bottom: 20px;
+}
+
+.applications-section table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.applications-section th,
+.applications-section td {
+    padding: 14px;
+    border-bottom: 1px solid #eee;
+    text-align: center;
+}
+
+.applications-section th {
+    font-weight: bold;
+}
+
+.applications-section tr:last-child td {
+    border-bottom: none;
+}
+
+/* Action buttons */
+
+.actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.actions form {
+    margin: 0;
+}
+
+.edit-btn,
+.delete-btn {
+    padding: 8px 14px;
+    border-radius: 5px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.edit-btn {
+    display: inline-block;
+}
+
+.delete-btn {
+    display: inline-block;
+}
+
+/* Job link */
+
+.applications-section a[href] {
+    text-decoration: none;
+}
+
+/* Status badges */
+
+.status {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.status-applied {
+    background-color: #fff3cd;
+}
+
+.status-interview {
+    background-color: #cfe2ff;
+}
+
+.status-offer {
+    background-color: #d1e7dd;
+}
+
+.status-rejected {
+    background-color: #f8d7da;
+}
+
+/* Responsive Design */
+
+@media (max-width: 900px) {
+
+    .dashboard {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .applications-section {
+        width: 95%;
+        overflow-x: auto;
+    }
+
+    .applications-section table {
+        min-width: 800px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .container {
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .dashboard {
+        grid-template-columns: 1fr;
+    }
+
+    .search-form {
+        flex-direction: column;
+    }
+
+    .search-form input,
+    .search-form select,
+    .search-form button {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .applications-section {
+        width: 95%;
+    }
+}
+
+.clear-btn {
+    display: inline-block;
+    padding: 11px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 15px;
+}

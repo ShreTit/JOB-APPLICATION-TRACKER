@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Application</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Add New Application</h1>
+
+        <form action="/submit" method="POST">
+
+            <label>Company Name</label>
+            <input type="text" name="company" required>
+
+            <label>Job Title</label>
+            <input type="text" name="role" required>
+
+            <label>Job URL</label>
+            <input type="url" name="job_url">
+
+            <label>Application Date</label>
+            <input type="date" name="application_date">
+
+            <label>Status</label>
+            <select name="status">
+                <option value="Applied">Applied</option>
+                <option value="Interview">Interview</option>
+                <option value="Rejected">Rejected</option>
+                <option value="Offer">Offer</option>
+            </select>
+
+            <label>Notes</label>
+            <textarea name="notes" rows="5"></textarea>
+
+            <button type="submit">Save Application</button>
+
+        </form>
+
+    </div>
+
+</body>
+</html> 

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Application</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Edit Application</h1>
+
+        <form method="POST">
+
+            <label>Company Name</label>
+            <input
+                type="text"
+                name="company"
+                value="{{ application[1] }}"
+                required
+            >
+
+            <label>Job Title</label>
+            <input
+                type="text"
+                name="role"
+                value="{{ application[2] }}"
+                required
+            >
+
+            <label>Job URL</label>
+            <input
+                type="url"
+                name="job_url"
+                value="{{ application[3] or '' }}"
+            >
+
+            <label>Application Date</label>
+            <input
+                type="date"
+                name="application_date"
+                value="{{ application[4] or '' }}"
+            >
+
+            <label>Status</label>
+
+            <select name="status" required>
+
+                <option value="Applied"
+                    {% if application[5] == "Applied" %}selected{% endif %}>
+                    Applied
+                </option>
+
+                <option value="Interview"
+                    {% if application[5] == "Interview" %}selected{% endif %}>
+                    Interview
+                </option>
+
+                <option value="Offer"
+                    {% if application[5] == "Offer" %}selected{% endif %}>
+                    Offer
+                </option>
+
+                <option value="Rejected"
+                    {% if application[5] == "Rejected" %}selected{% endif %}>
+                    Rejected
+                </option>
+
+            </select>
+
+            <label>Notes</label>
+
+            <textarea name="notes" rows="5">{{ application[6] or '' }}</textarea>
+
+            <button type="submit">Save Changes</button>
+
+        </form>
+
+        <a href="/">
+            <button type="button">Cancel</button>
+        </a>
+
+    </div>
+
+</body>
+</html>
